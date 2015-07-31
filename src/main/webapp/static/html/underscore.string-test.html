@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>underscore.string example</title>
+<!--
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.string/2.3.0/underscore.string.js"></script>
+ -->
+     <script src="../js/lib/underscore.string.js"></script>
+     <script src="../js/lib/require/require.js"></script>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script>
+    define(['require', 'underscore.string'], function (require) {
+        var truncate = require('underscore/truncate');
+        truncate('가나다라마바사아자차', 5)
+    });
+
+    define(function (require) {
+    	var s = require("underscore.string");
+    write("s('가나다라마바사아자차').truncate(5)")
+        var results = document.getElementById('results')
+        write("_.string.chop('whitespace', 3)")
+        write("_.string.clean(' foo    bar   ')")
+        write("_.string.chars('Hello')")
+        write("_.string.camelize('-moz-transform')")
+        write("_.string.titleize('my name is joe')")
+        write("_.string.truncate('hello world',5)")
+        write("_.string.truncate('가나다라마바사아자차',5)")
+    });
+    function write(func) {
+        results.innerHTML += '<li>' + func + '<br />=>' + eval(func) + '<br /><br />';
+    }
+    </script>
+</body>
+</html>

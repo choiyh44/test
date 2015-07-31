@@ -12,6 +12,6 @@ public class TestStringUtils {
 		System.out.println("[" + resultStr + "]");
 		resultStr = StringUtils.trimWhitespace(nullStr);
 		System.out.println("[" + resultStr + "]");
-	}
 
+	}
 }

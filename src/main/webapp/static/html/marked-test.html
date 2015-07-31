@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+  <script src="../js/lib/marked/marked.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <script>
+  	var markdownCont = "# Marked in <span>alert('browser');</span>\n\nRendered by **marked**.";
+  	var htmlCont = marked(markdownCont);
+  	console.log('-------[htmlCont]-------------');
+  	console.log(htmlCont);
+//    document.getElementById('content').innerHTML = htmlCont;
+
+    var sanitizedCont = marked(markdownCont, {sanitize: true});
+  	console.log('-------[sanitizedCont]-------------');
+  	console.log(sanitizedCont);
+    document.getElementById('content').innerHTML = sanitizedCont;
+  </script>
+</body>
+</html>
