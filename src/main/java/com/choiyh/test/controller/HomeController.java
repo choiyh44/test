@@ -1,4 +1,4 @@
-package com.choiyh.test;
+package com.choiyh.test.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

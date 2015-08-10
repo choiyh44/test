@@ -15,9 +15,12 @@ public class PegDownTest {
 		String html;
 		String markdown = "# Marked in <script>alert('browser');</script>\n\nRendered by **marked**.";
 
+		System.out.println("---ORG markdown -------------------------------");
+		System.out.println(markdown);
+
 		pegDown = new PegDownProcessor(Extensions.ALL);
 		html = pegDown.markdownToHtml(StringEscapeUtils.escapeHtml(markdown));
-		System.out.println("---SUPPRESS_ALL_HTML-------------------------------");
+		System.out.println("---SUPPRESS_ALL-------------------------------");
 		System.out.println(html);
 
 		pegDown = new PegDownProcessor(Extensions.SUPPRESS_ALL_HTML);
