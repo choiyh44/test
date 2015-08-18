@@ -4,7 +4,7 @@
 (function() {
 	var app = angular.module('restTestApp');
 
-	app.angular.controller('RestTestController',['$scope', 'restService', function($scope, restService) {
+	app.controller('RestTestController',['$scope', 'restTestService', function($scope, restTestService) {
 		// 폼필드 초기화
 		$scope.communityId = '';
 		$scope.communityName = '';
@@ -15,7 +15,7 @@
 			var newPost = {communityId: $scope.communityId ,communityName: $scope.communityName};
 
 			// DB에 등록
-			//restService.addPost(newPost);
+			//restTestService.addPost(newPost);
 		};
 
 	}]);

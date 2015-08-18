@@ -22,16 +22,25 @@
 		<form>
 			communityId: <input ng-model="communityId" /> {{communityId}}<br/>
 			communityName: <input ng-model="communityName" /> {{communityName}}<br/>
-			<button ng-click="onPostFormSubmit()">등록</button>
+			<button ng-click="onPostFormSubmit()">등록(Angular)</button>
+			<button id="newPost">등록(jQuery)</button>
 		</form>
 	</div>
 
 </div>
 
+<script type="text/javascript" src="/static/js/lib/jquery/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="/static/js/lib/angularjs/angular.min.js"></script>
-<script type="text/javascript" src="/static/js/rest/restTestApp.js"></script>
-<script type="text/javascript" src="/static/js/rest/restTestController.js"></script>
-<script type="text/javascript" src="/static/js/rest/restTestService.js"></script>
+<script type="text/javascript" src="/static/js/resttest/restTestApp.js"></script>
+<script type="text/javascript" src="/static/js/resttest/restTestController.js"></script>
+<script type="text/javascript" src="/static/js/resttest/restTestService.js"></script>
+<script>
+$(document).ready(function () {
+	$('#newPost').click(function() {
+		console.log("$('#newPost').click()");
+	});
 
+});
+</script>
 </body>
 </html>

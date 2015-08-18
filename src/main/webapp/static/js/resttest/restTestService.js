@@ -4,7 +4,7 @@
 (function() {
 	var app = angular.module('restTestApp');
 
-	app.angular.service('RestTestController',['$scope', '$http', function($scope, $http) {
+	app.service('restTestService',['$http', function($http) {
 		this.addPost =
 			function (community) {
 				console.log('Starting restService.addPost.');
